@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
   <TextView
-    android:id="@+id/textView2"
+    android:id="@+id/hello_text"
+    android:text="Удачной работы"
+    android:textSize="24dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Login Button"
-    tools:layout_editor_absoluteX="162dp"
-    tools:layout_editor_absoluteY="152dp" />
-</android.support.constraint.ConstraintLayout>
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"/>
+  <com.google.android.gms.common.SignInButton
+    android:id="@+id/sign_in_button"
+    android:layout_below="@+id/hello_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="24dp"
+    android:layout_centerHorizontal="true"/>
+</RelativeLayout>
