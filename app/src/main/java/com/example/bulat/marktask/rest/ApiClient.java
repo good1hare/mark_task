@@ -8,10 +8,6 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import com.example.bulat.marktask.BuildConfig;
 
-/**
- * Created by Ruslan Kalimullin on 02.02.2018.
- */
-
 public class ApiClient {
   public static IApiService getRestClient(){
     return setupRestClient();
