@@ -1,12 +1,15 @@
 package com.example.bulat.marktask.rest;
 
+import com.example.bulat.marktask.models.User;
 import io.reactivex.Observable;
-import retrofit2.http.GET;
+import retrofit2.http.Field;
 import retrofit2.http.POST;
 
 
 public interface IApiService {
 
-//  @POST("get_tasks")
-//  Observable<Tasks> getAllTasks();
+  @POST("auth")
+  Observable<User> auth(
+      @Field("token") String appId
+  );
 }
