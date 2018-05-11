@@ -7,16 +7,26 @@
     android:id="@+id/hello_text"
     android:text="Удачной работы"
     android:textSize="24dp"
+    android:clickable="true"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerVertical="true"
     android:layout_centerHorizontal="true"/>
-
-  <com.google.android.gms.common.SignInButton
-    android:id="@+id/sign_in_button"
-    android:layout_below="@+id/hello_text"
+  <Button
+    android:id="@+id/login"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingTop="24dp"
-    android:layout_centerHorizontal="true"/>
+    android:layout_marginTop="16dp"
+    android:layout_below="@+id/hello_text"
+    android:layout_centerHorizontal="true"
+    android:text="Вход" />
+  <Button
+    android:id="@+id/reg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_below="@+id/login"
+    android:layout_centerHorizontal="true"
+    android:text="Регистрация" />
+
 </RelativeLayout>
