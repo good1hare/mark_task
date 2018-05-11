@@ -65,6 +65,12 @@ public class RegActivity extends AppCompatActivity {
 //            });
       }
     });
+    bCancel.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+       finish();
+      }
+    });
   }
 
 }
