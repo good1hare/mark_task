@@ -8,6 +8,8 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.example.bulat.marktask.R;
+import com.example.bulat.marktask.activities.register.RegActivity;
+import com.example.bulat.marktask.rest.ApiService;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -17,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
   Button bLogin;
   @BindView(R.id.reg)
   Button bReg;
+  ApiService mApiService = new ApiService();
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +41,18 @@ public class LoginActivity extends AppCompatActivity {
       @Override
       public void onClick(View view) {
         //do reg
+       startActivitiForReg();
       }
     });
     tvHelloText.setOnClickListener((new View.OnClickListener() {
       @Override
       public void onClick(View view) {
-        //doAuth
       }
     }));
+  }
+
+  private void startActivitiForReg(){
+    RegActivity.startActivityFromIntent(this);
   }
 
 }

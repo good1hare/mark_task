@@ -11,8 +11,9 @@ import retrofit2.http.POST;
 public interface IApiService {
 
   @FormUrlEncoded
-  @POST("auth")
-  Observable<User> auth(
-      @Field("token") String appId
+  @POST("reg")
+  Observable<User> reg(
+      @Field("mail") String mail,
+      @Field("password") String password
   );
 }

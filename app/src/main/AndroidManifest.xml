@@ -20,8 +20,9 @@
       </intent-filter>
     </activity>
     <activity
-      android:launchMode="singleTask"
       android:name=".activities.main.MainActivity"></activity>
+    <activity
+      android:name=".activities.register.RegActivity"></activity>
 
     <meta-data
       android:name="preloaded_fonts"

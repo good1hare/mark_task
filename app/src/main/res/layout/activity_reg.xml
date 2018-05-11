@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <TextView
+    android:id="@+id/tvMail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="129dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/etMail"
+    android:text="Введите рабочую почту" />
+  <EditText
+    android:id="@+id/etMail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvMail"
+    android:layout_centerHorizontal="true"
+    android:ems="10"
+    android:inputType="textEmailAddress" />
+  <TextView
+    android:id="@+id/tvPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="14dp"
+    android:layout_alignStart="@+id/etMail"
+    android:layout_below="@+id/etMail"
+    android:text="Придумайте пароль" />
+  <EditText
+    android:id="@+id/etPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvPassword"
+    android:layout_centerHorizontal="true"
+    android:ems="10"
+    android:inputType="textPassword" />
+  <TextView
+    android:id="@+id/tvSecondPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_alignStart="@+id/etPassword"
+    android:layout_below="@+id/etPassword"
+    android:text="Повторите пароль" />
+  <EditText
+    android:id="@+id/etSecondPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/etPassword"
+    android:layout_below="@+id/tvSecondPassword"
+    android:ems="10"
+    android:inputType="textPassword" />
+  <Button
+    android:id="@+id/reg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_below="@+id/etSecondPassword"
+    android:layout_centerHorizontal="true"
+    android:text="Регистрация" />
+  <Button
+    android:id="@+id/cancel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="21dp"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:text="Отмена" />
+</RelativeLayout>

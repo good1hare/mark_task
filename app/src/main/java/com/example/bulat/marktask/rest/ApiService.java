@@ -5,9 +5,9 @@ import io.reactivex.Observable;
 
 public class ApiService implements IApiService {
   @Override
-  public Observable<User> auth(String token) {
+  public Observable<User> reg(String mail, String password) {
     return ApiClient
         .getRestClient()
-        .auth(token);
+        .reg(mail, password);
   }
 }
