@@ -13,13 +13,17 @@ android {
     buildTypes {
         debug{
             minifyEnabled false
-            buildConfigField("String", "BASE_URL", '"http://172.20.10.9:3333"')
+            buildConfigField("String", "BASE_URL", '"http://62.109.25.246:3333"')
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             buildConfigField("String", "BASE_URL", '"http://"')
         }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
     }
 }
 
@@ -37,14 +41,10 @@ dependencies {
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     implementation 'com.google.code.gson:gson:2.8.0'
-    implementation 'com.google.android.gms:play-services-plus:11.8.0'
-    implementation 'com.google.android.gms:play-services-auth:11.8.0'
-    implementation 'com.google.android.gms:play-services-identity:11.8.0'
-    implementation 'com.google.android.gms:play-services-base:11.8.0'
 
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     testImplementation 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:2.6.3'
-    implementation 'com.google.android.gms:play-services-ads:11.8.0'
+    //implementation 'com.google.android.gms:play-services-ads:11.8.0'
 }
