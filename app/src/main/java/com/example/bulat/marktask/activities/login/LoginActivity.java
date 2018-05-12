@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(this::startMain, throwable -> {
               throwable.printStackTrace();
-              toastError();
+              //toastError();
             });
       }else {
         toastError();

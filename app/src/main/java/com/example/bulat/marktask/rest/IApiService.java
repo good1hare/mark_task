@@ -1,5 +1,6 @@
 package com.example.bulat.marktask.rest;
 
+import com.example.bulat.marktask.models.Status;
 import com.example.bulat.marktask.models.User;
 import io.reactivex.Observable;
 import io.reactivex.annotations.Nullable;
@@ -23,5 +24,13 @@ public interface IApiService {
   Observable<User> auth(
       @Field("login") String login,
       @Field("password") String password
+  );
+
+  @FormUrlEncoded
+  @POST("create_task")
+  Observable<Status> create_task(
+      @Field("task_name") String name,
+      @Field("task_desc") String desc,
+      @Field("task_exec") String exec
   );
 }
