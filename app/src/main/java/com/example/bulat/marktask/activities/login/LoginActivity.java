@@ -9,6 +9,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import com.example.bulat.marktask.R;
+import com.example.bulat.marktask.activities.main.MainActivity;
 import com.example.bulat.marktask.activities.register.RegActivity;
 import com.example.bulat.marktask.models.User;
 import com.example.bulat.marktask.rest.ApiService;
@@ -25,10 +26,13 @@ public class LoginActivity extends AppCompatActivity {
   EditText etLogin;
   @BindView(R.id.etPassword)
   EditText etPassword;
-  @BindView(R.id.login)
+
+  @BindView(R.id.bLogin)
   Button bLogin;
-  @BindView(R.id.reg)
+
+  @BindView(R.id.bReg)
   Button bReg;
+
   ApiService mApiService = new ApiService();
 
   @Override
@@ -56,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         toastError();
       }
     });
+
     bReg.setOnClickListener(view -> {
       //do reg
      startActivityForReg();
@@ -63,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
   }
 
   private void startMain(User user) {
-    //RegActivity.startActivityFromIntent(this);
+    MainActivity.startActivityFromIntent(this);
   }
 
   private void startActivityForReg(){

@@ -4,15 +4,15 @@
   android:layout_height="match_parent">
 
   <Button
-    android:id="@+id/login"
+    android:id="@+id/bLogin"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="26dp"
-    android:layout_above="@+id/reg"
+    android:layout_marginBottom="19dp"
+    android:layout_above="@+id/bReg"
     android:layout_centerHorizontal="true"
     android:text="Вход" />
   <Button
-    android:id="@+id/reg"
+    android:id="@+id/bReg"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="96dp"
@@ -35,7 +35,7 @@
     android:layout_marginBottom="43dp"
     android:layout_alignBottom="@+id/etLogin"
     android:layout_alignStart="@+id/etLogin"
-    android:text="Введите логин" />
+    android:text="Введите почту" />
   <EditText
     android:id="@+id/etPassword"
     android:layout_width="wrap_content"
