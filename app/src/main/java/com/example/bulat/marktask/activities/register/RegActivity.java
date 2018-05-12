@@ -59,11 +59,8 @@ public class RegActivity extends AppCompatActivity {
       if (etPassword.getText().toString().equals(etSecondPassword.getText().toString()) && !etPassword.getText().toString().isEmpty() && !etName.getText().toString().isEmpty()) {
         mApiService
             .reg(etMail.getText().toString(), etPassword.getText().toString(), etName.getText().toString())
-//              .map(ResponceUsers::getAllUsers)
-//              .map(users -> users.get(0))
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            //.doOnTerminate(mLoginView::hideProgress)
             .subscribe(this::finishReg, throwable -> {
               throwable.printStackTrace();
               toastError();

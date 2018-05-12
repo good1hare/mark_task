@@ -10,4 +10,11 @@ public class ApiService implements IApiService {
         .getRestClient()
         .reg(mail, password, name);
   }
+
+  @Override
+  public Observable<User> auth(String login, String password) {
+    return ApiClient
+        .getRestClient()
+        .auth(login, password);
+  }
 }

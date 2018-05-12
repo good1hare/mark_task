@@ -17,4 +17,11 @@ public interface IApiService {
       @Field("password") String password,
       @Field("name") String name
   );
+
+  @FormUrlEncoded
+  @POST("auth")
+  Observable<User> auth(
+      @Field("login") String login,
+      @Field("password") String password
+  );
 }

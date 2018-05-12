@@ -3,30 +3,55 @@
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
-  <TextView
-    android:id="@+id/hello_text"
-    android:text="Удачной работы"
-    android:textSize="24dp"
-    android:clickable="true"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerVertical="true"
-    android:layout_centerHorizontal="true"/>
   <Button
     android:id="@+id/login"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:layout_below="@+id/hello_text"
+    android:layout_marginBottom="26dp"
+    android:layout_above="@+id/reg"
     android:layout_centerHorizontal="true"
     android:text="Вход" />
   <Button
     android:id="@+id/reg"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:layout_below="@+id/login"
+    android:layout_marginBottom="96dp"
+    android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
     android:text="Регистрация" />
+  <EditText
+    android:id="@+id/etLogin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="102dp"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:ems="10"
+    android:inputType="textPersonName" />
+  <TextView
+    android:id="@+id/tvLogin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="43dp"
+    android:layout_alignBottom="@+id/etLogin"
+    android:layout_alignStart="@+id/etLogin"
+    android:text="Введите логин" />
+  <EditText
+    android:id="@+id/etPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="44dp"
+    android:layout_alignStart="@+id/etLogin"
+    android:layout_below="@+id/etLogin"
+    android:ems="10"
+    android:inputType="textPassword" />
+  <TextView
+    android:id="@+id/tvPassword"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="25dp"
+    android:layout_alignStart="@+id/etPassword"
+    android:layout_below="@+id/etLogin"
+    android:text="Введите пароль" />
 
 </RelativeLayout>
