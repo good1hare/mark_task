@@ -35,11 +35,11 @@ public class LoginActivity extends AppCompatActivity {
     });
     bReg.setOnClickListener(view -> {
       //do reg
-     startActivitiForReg();
+     startActivityForReg();
     });
   }
 
-  private void startActivitiForReg(){
+  private void startActivityForReg(){
     RegActivity.startActivityFromIntent(this);
   }
 

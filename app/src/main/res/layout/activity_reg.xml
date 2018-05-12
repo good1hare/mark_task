@@ -67,4 +67,20 @@
     android:layout_alignParentBottom="true"
     android:layout_centerHorizontal="true"
     android:text="Отмена" />
+  <EditText
+    android:id="@+id/etName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="22dp"
+    android:layout_above="@+id/etMail"
+    android:layout_alignStart="@+id/tvMail"
+    android:ems="10"
+    android:inputType="textPersonName" />
+  <TextView
+    android:id="@+id/tvName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/etName"
+    android:layout_alignStart="@+id/etName"
+    android:text="Введите ваши имя и фамилию" />
 </RelativeLayout>

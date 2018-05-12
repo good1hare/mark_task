@@ -14,6 +14,7 @@ public interface IApiService {
   @POST("reg")
   Observable<User> reg(
       @Field("mail") String mail,
-      @Field("password") String password
+      @Field("password") String password,
+      @Field("name") String name
   );
 }

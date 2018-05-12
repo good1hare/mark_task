@@ -8,7 +8,7 @@
 
   <string name="success">Вы успешно зарегистрировались! Можете войти</string>
 
-  <string name="reg_error">Не верно введен пароль!</string>
+  <string name="reg_error">Не верно введен пароль или не заполнены все поля!</string>
 
   <string name="error_email">Эта почта уже используется!</string>
 </resources>

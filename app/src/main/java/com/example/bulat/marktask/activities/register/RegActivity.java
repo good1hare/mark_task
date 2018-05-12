@@ -31,6 +31,8 @@ public class RegActivity extends AppCompatActivity {
   EditText etPassword;
   @BindView(R.id.etSecondPassword)
   EditText etSecondPassword;
+  @BindView(R.id.etName)
+  EditText etName;
   @BindView(R.id.reg)
   Button bReg;
   @BindView(R.id.cancel)
@@ -54,9 +56,9 @@ public class RegActivity extends AppCompatActivity {
   private void setListeners() {
     bReg.setOnClickListener(view -> {
       //do reg
-      if (etPassword.getText().toString().equals(etSecondPassword.getText().toString()) && !etPassword.getText().toString().isEmpty()) {
+      if (etPassword.getText().toString().equals(etSecondPassword.getText().toString()) && !etPassword.getText().toString().isEmpty() && !etName.getText().toString().isEmpty()) {
         mApiService
-            .reg(etMail.getText().toString(), etPassword.getText().toString())
+            .reg(etMail.getText().toString(), etPassword.getText().toString(), etName.getText().toString())
 //              .map(ResponceUsers::getAllUsers)
 //              .map(users -> users.get(0))
             .subscribeOn(Schedulers.io())
