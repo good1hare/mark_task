@@ -64,11 +64,6 @@ public class MainActivity extends AppCompatActivity
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
-    switch(item.getItemId()){
-      case R.id.action_settings:
-        break;
-    }
-
     return super.onOptionsItemSelected(item);
   }
 
@@ -76,13 +71,9 @@ public class MainActivity extends AppCompatActivity
   @Override
   public boolean onNavigationItemSelected(MenuItem item) {
     switch(item.getItemId()){
-      case R.id.nav_gallery:
+      case R.id.nav_main:
         break;
-      case R.id.nav_manage:
-        break;
-      case R.id.nav_share:
-        break;
-      case R.id.nav_send:
+      case R.id.nav_exit:
         break;
     }
 
