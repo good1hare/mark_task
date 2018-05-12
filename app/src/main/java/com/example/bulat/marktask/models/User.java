@@ -17,9 +17,9 @@ public class User {
   @Expose
   private String mEmail;
 
-//  @SerializedName("imageLink")
-//  @Expose
-//  private String mImageLink;
+  @SerializedName("error")
+  @Expose
+  private String mError;
 
   public String getId() {
     return mId;
@@ -45,11 +45,7 @@ public class User {
     mEmail = email;
   }
 
-//  public String getImageLink() {
-//    return mImageLink;
-//  }
-//
-//  public void setImageLink(String imageLink) {
-//    mImageLink = imageLink;
-//  }
+  public String getError() {
+    return mError;
+  }
 }

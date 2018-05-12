@@ -66,6 +66,8 @@ public class RegActivity extends AppCompatActivity {
               throwable.printStackTrace();
               toastError();
             });
+      }else {
+        toastError();
       }
 
     });
@@ -73,11 +75,16 @@ public class RegActivity extends AppCompatActivity {
   }
 
   private void finishReg(User user) {
-    //start activity
+    if (user.getError().equals("1")){
+      Toast.makeText(this, R.string.error_email, Toast.LENGTH_SHORT).show();
+    }else {
+      Toast.makeText(this, R.string.success, Toast.LENGTH_SHORT).show();
+      finish();
+    }
   }
   
   private void toastError(){
-    Toast.makeText(this, R.string.app_name, Toast.LENGTH_SHORT).show();
+    Toast.makeText(this, R.string.reg_error, Toast.LENGTH_SHORT).show();
   }
 
 }

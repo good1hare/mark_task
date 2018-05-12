@@ -6,5 +6,9 @@
 
   <string name="action_settings">Settings</string>
 
-  <string name="toast_one">Ошибка попробуйте еще раз</string>
+  <string name="success">Вы успешно зарегистрировались! Можете войти</string>
+
+  <string name="reg_error">Не верно введен пароль!</string>
+
+  <string name="error_email">Эта почта уже используется!</string>
 </resources>
