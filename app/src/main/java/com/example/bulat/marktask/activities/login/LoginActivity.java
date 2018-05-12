@@ -13,6 +13,7 @@ import com.example.bulat.marktask.activities.main.MainActivity;
 import com.example.bulat.marktask.activities.register.RegActivity;
 import com.example.bulat.marktask.models.User;
 import com.example.bulat.marktask.rest.ApiService;
+import com.example.bulat.marktask.utils.PreferenceManager;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
@@ -69,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
 
   private void startMain(User user) {
     MainActivity.startActivityFromIntent(this);
+    PreferenceManager.saveUserValues(user);
   }
 
   private void startActivityForReg(){
