@@ -2,25 +2,22 @@ package com.example.bulat.marktask.activities.main;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.text.InputType;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import com.example.bulat.marktask.R;
 import com.example.bulat.marktask.activities.fragment.TasksFragment;
 import com.example.bulat.marktask.models.Status;
@@ -43,7 +40,6 @@ public class MainActivity extends AppCompatActivity
   private TasksFragment mTasksFragment;
   private FragmentManager mFragmentManager;
 
-  FloatingActionButton plus;
 
   ApiService mApiService = new ApiService();
 
@@ -56,7 +52,6 @@ public class MainActivity extends AppCompatActivity
 
 
     navigationView = findViewById(R.id.nav_view);
-    plus = findViewById(R.id.plus);
     navigationView.setNavigationItemSelectedListener(this);
     initComponents();
     tvUserName.setText(mUserName);
@@ -66,10 +61,7 @@ public class MainActivity extends AppCompatActivity
 
     mTasksFragment = new TasksFragment();
     mFragmentManager.beginTransaction().replace(R.id.fragment_container, mTasksFragment).commit();
-    plus.setOnClickListener(view -> {
-      Snackbar.make(view, "Создание задания", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-      showAlertStepOne();
-    });
+
   }
 
   public static void startActivityFromIntent(Context context) {
@@ -103,6 +95,11 @@ public class MainActivity extends AppCompatActivity
   public boolean onNavigationItemSelected(MenuItem item) {
     switch(item.getItemId()){
       case R.id.nav_main:
+        break;
+      case R.id.nav_create_task:
+        showAlertStepOne();
+        break;
+      case R.id.nav_manage:
         break;
       case R.id.nav_exit:
         finish();
@@ -172,7 +169,7 @@ public class MainActivity extends AppCompatActivity
     final AlertDialog.Builder alert = new AlertDialog.Builder(this);
     final EditText editText = new EditText(this);
     editText.setInputType(InputType.TYPE_CLASS_TEXT);
-    alert.setTitle("Введите фамилию и имя исполнителя");
+    alert.setTitle("Введите Имя и Фамилию исполнителя");
 
     alert.setView(editText);
 

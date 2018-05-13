@@ -18,10 +18,8 @@ import com.example.bulat.marktask.adapter.TasksListAdapter;
 import com.example.bulat.marktask.models.Task;
 import com.example.bulat.marktask.rest.ApiService;
 import com.example.bulat.marktask.utils.PreferenceManager;
-import com.google.gson.reflect.TypeToken;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import java.lang.reflect.Type;
 import java.util.List;
 
 public class TasksFragment extends Fragment {

@@ -6,11 +6,20 @@
   <group android:checkableBehavior="single">
     <item
       android:id="@+id/nav_main"
-      android:icon="@drawable/ic_menu_gallery"
+      android:icon="@mipmap/baseline_event_note_black_24dp"
       android:title="Поручения" />
-      <item
-        android:id="@+id/nav_exit"
-        android:title="Выйти" />
+    <item
+      android:id="@+id/nav_create_task"
+      android:icon="@mipmap/baseline_add_box_black_24dp"
+      android:title="Создать задание" />
+    <item
+      android:id="@+id/nav_manage"
+      android:icon="@drawable/ic_menu_manage"
+      android:title="Настройки" />
+    <item
+      android:id="@+id/nav_exit"
+      android:icon="@mipmap/baseline_backspace_black_24dp"
+      android:title="Выйти" />
   </group>
 
 </menu>

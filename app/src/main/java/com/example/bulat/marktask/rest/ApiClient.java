@@ -1,12 +1,12 @@
 package com.example.bulat.marktask.rest;
 
+import com.example.bulat.marktask.BuildConfig;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import com.example.bulat.marktask.BuildConfig;
 
 public class ApiClient {
   public static IApiService getRestClient(){
