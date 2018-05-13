@@ -1,9 +1,10 @@
 package com.example.bulat.marktask.rest;
 
 import com.example.bulat.marktask.models.Status;
+import com.example.bulat.marktask.models.Task;
 import com.example.bulat.marktask.models.User;
 import io.reactivex.Observable;
-import io.reactivex.annotations.Nullable;
+import java.util.List;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
@@ -31,6 +32,12 @@ public interface IApiService {
   Observable<Status> create_task(
       @Field("task_name") String name,
       @Field("task_desc") String desc,
+      @Field("task_exec") String exec
+  );
+
+  @FormUrlEncoded
+  @POST("get_tasks")
+  Observable<List<Task>> get_tasks(
       @Field("task_exec") String exec
   );
 }

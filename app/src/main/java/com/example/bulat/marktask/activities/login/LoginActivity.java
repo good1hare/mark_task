@@ -1,5 +1,6 @@
 package com.example.bulat.marktask.activities.login;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -69,8 +70,8 @@ public class LoginActivity extends AppCompatActivity {
   }
 
   private void startMain(User user) {
+    PreferenceManager.createPreferenceManager(this).saveUserValues(user);
     MainActivity.startActivityFromIntent(this);
-    PreferenceManager.saveUserValues(user);
   }
 
   private void startActivityForReg(){
