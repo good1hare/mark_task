@@ -52,8 +52,8 @@ public class TasksListAdapter extends BaseAdapter {
     ButterKnife.bind(this, convertView);
 
     itemName.setText(task.getName());
-    itemExec.setText(task.getExec());
-    itemDesc.setText(task.getDesc());
+    itemExec.setText("Исполнитель: " + task.getExec());
+    itemDesc.setText("Описание: " + task.getDesc());
     return convertView;
   }
 }
